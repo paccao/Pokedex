@@ -11,8 +11,9 @@ const pokemonWrapper = {
 function fetchData() {
     // Fetch pokemons and push them onto the pokemons array. This will fill that array with promises.
     // 151 Pokémons in Generation 1
-    for (let i = 1; i < 152; i++) {
-        let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+    let url;
+    for (let i = 1; i < 13; i++) {
+        url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         pokemons.push(fetch(url).then(res => res.json()));
     }
 
@@ -27,14 +28,14 @@ function fetchData() {
             "type": data.types.map(type => capitalizeFirstLetter(type.type.name)).join("/ "),
             "abilities": data.abilities.map(ability => capitalizeFirstLetter(ability.ability.name)).join(", "),
         }));
-        console.log(pokemon);
+        // console.log(pokemon);
 
         // Show pokemon in HTML
         showPokemon(pokemon);
     });
 };
 
-// fetchData();
+fetchData();
 
 const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
