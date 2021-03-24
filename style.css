@@ -88,7 +88,7 @@ header {
   /* background: #ffffff; */
   border-radius: 3px;
   height: 100%;
-  margin: 1rem;
+  margin: 0rem;
 }
 
 main {
@@ -105,7 +105,7 @@ h1 {
 /* ___________ */
 
 .pokemon-wrapper {
-  padding: 3rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -149,9 +149,6 @@ h1 {
 /* _____________ */
 
 @media screen and (max-width: 1020px) {
-  .content-wrapper {
-    width: ;
-  }
   .pokemon-wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -176,6 +173,10 @@ h1 {
     margin: 1rem 0;
   }
 
+  #navlink-home {
+    position: unset;
+  }
+
   #search-form {
     margin: 0;
   }
@@ -186,5 +187,6 @@ h1 {
 
   .pokemon-wrapper {
     grid-template-columns: 1fr;
+    padding: 0rem;
   }
 }
