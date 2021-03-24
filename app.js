@@ -75,7 +75,7 @@ const capitalizeFirstLetter = (string) => {
 const showPokemon = (pokemon) => {
     pokemon.map((item, index) => { 
         pokemonWrapper.mainURL.innerHTML += `
-            <article class="animate__animated animate__fadeInLeftBig pokeball pokeball-${index}">
+            <article class="pokeball pokeball-${index}">
                 <h2 class="pokemon-name pokemon-name-${index}">${item.name}</h2>
                 <img src="${item.image}" class="pokemon-img pokemon-img-${index}">
                 <section class="pokemon-info">
