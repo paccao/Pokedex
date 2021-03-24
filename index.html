@@ -1,64 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch 'em all!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utils.css">
-    <script src="app.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catch 'em all!</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="utils.css">
+        <script src="app.js" defer></script>
+    </head>
 
-<body>
-    <div class="page-wrapper">
-        <header>
+    <body>
+        <div class="page-wrapper">
             <nav class="navbar">
                 <ul>
                     <li id="navlink-home" class="navlink">
                         <a href="#">Pokédex</a>
                     </li>
-                    <form id="search-form">
-                        <input type="text" id="search-field" placeholder="Search">
-                    </form>
                     <li id="navlink-showcase" class="navlink">
-                        <a href="#showcase">Pokémons</a>
+                        <a href="#showcase">Pokémon</a>
                     </li>
                 </ul>
             </nav>
-        </header>
-        <div class="content-wrapper">
-            <main id="showcase">
-                <h1>Pokédex</h1>
-
-                <section class="pokemon-wrapper">
-                    <!-- Dynamic -->
-
-                    <!-- <article class="pokeball pokeball-${index}">
-                        <h2 class="pokemon-name pokemon-name-${index}">${item.name}</h2>
-                        <img src="${item.image}" class="pokemon-img pokemon-img-${index}">
-                        <section class="pokemon-info">
-                            <p class="pokemon-id pokemon-id-${index}">ID: ${item.id}</p>
-                            <p class="pokemon-weight pokemon-weight-${index}">Weight: ${item.weight}</p>
-                            <p class="pokemon-height pokemon-height-${index}">Height: ${item.height}</p>
-                            <div class="pokemon-lists">
-                                <div class="pokemon-types">
-                                    <p class="pokemon-type pokemon-type-${index}">Type: ${item.type}</p>
-                                </div>
-                                <div class="pokemon-abilities">
-                                    <p class="pokemon-ability pokemon-ability-${index}">Abilities: ${item.abilities}</p>
-                                </div>
-                            </div>
-                        </section>
-                    </article> -->
-                </section>
-            </main>
-            <footer>
-
-            </footer>
+            <div class="content-wrapper">
+                <main>
+                    <h1>Pokédex</h1>
+                    <input type="text" id="search-field" placeholder="Search by name" autofocus autocomplete="off"
+                        spellcheck="false">
+                    <section class="pokemon-wrapper" id="showcase">
+                        <!-- Dynamic -->
+                    </section>
+                </main>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>
