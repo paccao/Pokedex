@@ -2,6 +2,34 @@
 let pokemons = [];
 let pokemon = {};
 
+
+// * Filter the pokemons via the searchbar
+
+// grab the search form and its input field, an HTML Colletion.
+const searchBar = document.querySelector("#search-field");
+// Listen for keyup event
+searchBar.addEventListener("keyup", e => {
+    // Grab search term, or input and set the value of the event target to lowercase
+    const term = e.target.value.toLowerCase();
+    // Grab all elements in the pokemonWrapper section
+    const pokeballs = pokemonWrapper.mainURL.getElementsByTagName("h2");
+    // Make the elements into an array
+
+    Array.from(pokeballs).forEach(pokemon => {
+        // Check for the term is equal to certain values of the pokemons
+        const pokemonName = pokemon.textContent;
+        // indexOf(term) will return -1 if each index of the term does not exist in pokemonName
+        if(pokemonName.toLowerCase().indexOf(term) != -1) {
+            // Show all pokeballs with names that match the search an index of the search term
+            pokemon.parentNode.style.display = "flex";
+        } else {
+            // Hide the ones that doesn't match the search term
+            pokemon.parentNode.style.display = "none";
+        }
+    })
+});
+
+// DOM elements
 const pokemonWrapper = {
     "mainURL": document.querySelector(".pokemon-wrapper"),
     "types": document.querySelector(".pokemon-types"),
