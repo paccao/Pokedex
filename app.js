@@ -106,3 +106,14 @@ searchBar.addEventListener("keyup", (e) => {
   };
   filterPokemon(pokeNames);
 });
+
+// * H1 animation
+const pageHeroH1 = document.querySelector("h1");
+
+window.requestAnimationFrame((e) => {
+  pageHeroH1.classList.add("apply-shake");
+});
+
+pageHeroH1.addEventListener("animationend", (e) => {
+  pageHeroH1.classList.remove("apply-shake");
+});

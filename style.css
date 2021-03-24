@@ -77,6 +77,8 @@ header {
   padding: 0.8rem 0;
   font-size: 1.5rem;
   text-align: center;
+
+  animation: popOutFromBehind 1s;
 }
 
 /* ___________ */
@@ -99,7 +101,6 @@ main {
 h1 {
   font-size: 3.5rem;
   margin: 1rem;
-  animation: popOutFromBehind 1s;
 }
 
 /* ___________ */
@@ -259,4 +260,33 @@ h1 {
   100% {
     transform: scale(100%);
   }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.apply-shake {
+  /* cubic-bezier's inputs are x1, y1, x2, y2 in a 2d coordinate system ranging from 0 to 1 */
+  /* The cubic bezier below will make an ease-in-out type of animation curve */
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
